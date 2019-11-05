@@ -57,3 +57,9 @@ Other | Unknown/Error
 
 #### Note about Gestures:
 I recommend only having one of (Reach or Presence) enabled and one of(Swipe or Flick) enabled as one gestures output will almost certainly overpower the other.
+
+
+#### Launching the service from Tasker
+    Start OsloBridger Service
+    	A1: Send Intent [ Action:com.jcarletto.oslobridger.TOGGLE_SERVICE Cat:Default Mime Type: Data: Extra: Extra: Extra: Package: Class: Target:Service ] 
+    
