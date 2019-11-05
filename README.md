@@ -1,7 +1,4 @@
 # Pixel 4/XL MotionSense Mod with OsloBridger App
-<<<<<<< HEAD
-This is the official Magisk Module for the Pixel 4/4XL MotionSense mod and OsloBridger App
-=======
 This is the official Magisk Module for the Pixel 4/4XL MotionSense mod and OsloBridger App
 
 
@@ -60,7 +57,3 @@ Other | Unknown/Error
 
 #### Note about Gestures:
 I recommend only having one of (Reach or Presence) enabled and one of(Swipe or Flick) enabled as one gestures output will almost certainly overpower the other.
-
-
-
->>>>>>> 63a83e911bf2efc3781fe8b0159786cd82988ff5
