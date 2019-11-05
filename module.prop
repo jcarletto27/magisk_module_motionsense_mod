@@ -1,0 +1,7 @@
+id=OsloBridger_Mod
+name=Pixel MotionSense mod with OsloBridger
+version=v1.0.0
+versionCode=1
+author=Jake Carletto
+description=Uninstalls the system MotionSense Bridge app and replaces it with a modified version that removes the access check. Iinstalls the OsloBridger App for integration with Tasker.
+support=
