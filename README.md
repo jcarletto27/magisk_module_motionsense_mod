@@ -1,8 +1,5 @@
 # Pixel 4/XL MotionSense Mod with OsloBridger App
-<<<<<<< HEAD
-This is the official Magisk Module for the Pixel 4/4XL MotionSense mod and OsloBridger App
-=======
-This is the official Magisk Module for the Pixel 4/4XL MotionSense mod and OsloBridger App
+This is the Magisk Module for the Pixel 4/4XL MotionSense mod and OsloBridger App
 
 
 ## OsloBridger App
@@ -61,6 +58,21 @@ Other | Unknown/Error
 #### Note about Gestures:
 I recommend only having one of (Reach or Presence) enabled and one of(Swipe or Flick) enabled as one gestures output will almost certainly overpower the other.
 
+#### Note on launching the service
+I recommend launching the service from within Tasker based on criteria like the Running application is your (previously unsupported) media app, Android Auto or just when your screen is off. The intent is a toggle, so simply execute the same task to stop the service.
 
+#### Task to launch the service from Tasker
+    Start OsloBridger Service
+    A1: Send Intent [ 
+      Action:com.jcarletto.oslobridger.TOGGLE_SERVICE 
+      Cat:Default 
+      Mime Type: 
+      Data: 
+      Extra: 
+      Extra: 
+      Extra: 
+      Package: 
+      Class: 
+      Target:Service 
+     ] 
 
->>>>>>> 63a83e911bf2efc3781fe8b0159786cd82988ff5
