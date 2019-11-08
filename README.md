@@ -3,7 +3,10 @@ This is the Magisk Module for the Pixel 4/4XL MotionSense mod and OsloBridger Ap
 
 
 ## OsloBridger App
-It is possible to send a service intent of "com.jcarletto.oslobridger.TOGGLE_SERVICE" which will activate the service without needing to load up the UI.
+It is possible to send a service intent from Tasker with an action of "com.jcarletto.oslobridger.TOGGLE_SERVICE" which will activate the service without needing to load up the UI.
+
+## V1.1.0
+I've changed the OsloBridger App to now allow for selecting a task from Tasker. Make sure "Allow External Access" is checked in the Tasker Misc Preferences. If No task is picked it will still send the normal Broadcast intents for active gestures.
 
 ### Sensor Settings:
 #### Trigger Distance: 
@@ -25,6 +28,7 @@ It is possible to send a service intent of "com.jcarletto.oslobridger.TOGGLE_SER
 
 #### Presence : Like Reach, but ongoing
   * Sends Intent - com.jcarletto.oslobridger.PRESENCE_GESTURE
+  * Expect this one to trigger constantly, try to avoid using Flashes as they'll clog up quickly
   * Intent Sends Extras : distance, confidence, angle
   * Confidence extra is not reliable
   * Angle extra is not reliable
@@ -39,19 +43,16 @@ It is possible to send a service intent of "com.jcarletto.oslobridger.TOGGLE_SER
   * Sends Intent - com.jcarletto.oslobridger.SWIPE_GESTURE
   * Intent Sends Extras : direction, intensity
   * Direction extra is not reliable, usually only sends 0
+  * The trigger is probably all we'll get reliably from the API here
   * intensity extra only sends 0.0f
   
 Return Val | Flick/Swipe Directions
 -----------|----------------
 1 | E
-2 | NE
 3 | N
-4 | NW
 5 | W
-6 | SW
 7 | S
-8 | SE
-Other | Unknown/Error
+0 | Unknown/Error
 
 
 
