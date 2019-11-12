@@ -11,14 +11,15 @@ I've changed the OsloBridger App to now allow for selecting a task from Tasker. 
 ### Sensor Settings:
 #### Trigger Distance: 
   * Value between 1 and 10 that represents how far from the sensor a gesture triggers an intent
+  * Recommended Value : 3-5
 
 #### Gesture Sensitivity:
   * The threshold of how closely the gesture should resemble a "proper" gesture before triggering
-  * Lower triggers more often
+  * Recommended Value : Low
 
 #### Gesture Granularity:
   * How often the the bridge checks the sensor for a response,
-  * Higher triggers more often
+  * Recommended Value: Medium
 
 
 ### Gesture Types:
@@ -30,8 +31,8 @@ I've changed the OsloBridger App to now allow for selecting a task from Tasker. 
   * Sends Intent - com.jcarletto.oslobridger.PRESENCE_GESTURE
   * Expect this one to trigger constantly, try to avoid using Flashes as they'll clog up quickly
   * Intent Sends Extras : distance, confidence, angle
-  * Confidence extra is not reliable
-  * Angle extra is not reliable
+  * Confidence extra is not reliable in Current Soli API
+  * Angle extra is not reliable in Current Soli API
 
 #### Flick : Direction Sensitive Motion Gesture
   * Sends Intent - com.jcarletto.oslobridger.FLICK_GESTURE
@@ -42,7 +43,7 @@ I've changed the OsloBridger App to now allow for selecting a task from Tasker. 
 #### Swipe : Direction Agnostic Motion Gesture
   * Sends Intent - com.jcarletto.oslobridger.SWIPE_GESTURE
   * Intent Sends Extras : direction, intensity
-  * Direction extra is not reliable, usually only sends 0
+  * Direction extra is not reliable in Current Soli API
   * The trigger is probably all we'll get reliably from the API here
   * intensity extra only sends 0.0f
   
