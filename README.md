@@ -15,11 +15,11 @@ I've changed the OsloBridger App to now allow for selecting a task from Tasker. 
 
 #### Gesture Sensitivity:
   * The threshold of how closely the gesture should resemble a "proper" gesture before triggering
-  * Recommended Value : Low
+  * Recommended Value : 1
 
 #### Gesture Granularity:
   * How often the the bridge checks the sensor for a response,
-  * Recommended Value: Medium
+  * Recommended Value: 2
 
 
 ### Gesture Types:
