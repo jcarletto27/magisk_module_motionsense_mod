@@ -1,6 +1,6 @@
 id=OsloBridger_Mod
 name=Pixel 4/4XL MotionSense mod with OsloBridger
-version=v1.1.0
-versionCode=110
+version=v1.1.2
+versionCode=112
 author=JCarletto27 (XDA: AsherGray)
 description=Overwrites the system MotionSense Bridge app and replaces it with a modified version that removes the access check. Installs the OsloBridger App for integration with Tasker.
