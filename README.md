@@ -63,10 +63,38 @@ I recommend only having one of (Reach or Presence) enabled and one of(Swipe or F
 #### Note on launching the service
 I recommend launching the service from within Tasker based on criteria like the Running application is your (previously unsupported) media app, Android Auto or just when your screen is off. The intent is a toggle, so simply execute the same task to stop the service.
 
-#### Task to launch the service from Tasker
-    Start OsloBridger Service
+#### Tasks to launch the service from Tasker
+    Toggle OsloBridger Service
     A1: Send Intent [ 
       Action:com.jcarletto.oslobridger.TOGGLE_SERVICE 
+      Cat:Default 
+      Mime Type: 
+      Data: 
+      Extra: 
+      Extra: 
+      Extra: 
+      Package: 
+      Class: 
+      Target:Service 
+     ] 
+    
+    Start OsloBridger Service
+    A1: Send Intent [ 
+      Action:com.jcarletto.oslobridger.START_SERVICE 
+      Cat:Default 
+      Mime Type: 
+      Data: 
+      Extra: 
+      Extra: 
+      Extra: 
+      Package: 
+      Class: 
+      Target:Service 
+     ] 
+     
+    Stop OsloBridger Service
+    A1: Send Intent [ 
+      Action:com.jcarletto.oslobridger.STOP_SERVICE 
       Cat:Default 
       Mime Type: 
       Data: 
