@@ -134,6 +134,14 @@ print_modname() {
 on_install() {
   # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
   # Extend/change the logic to whatever you want
+  
+  model=$(echo $( getprop ro.product.model ))
+  if [[ $model == *"Pixel 4"* ]]; then
+	ui_print "- Found a Pixel 4 Variant"
+  
+  
+  
+  
   ui_print "- Extracting module files to " $MODPATH
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
   
@@ -141,10 +149,13 @@ on_install() {
   ui_print "- Uninstalling MotionSense Bridge Updates"
   pm uninstall com.google.android.apps.motionsense.bridge >&2
   
-  ##ui_print "- Installing modded MotionSense Bridge"
-  ##pm install $MODPATH/app/Modded_MotionSense_Bridge.apk
-  ##ui_print "- Installing OsloBridger"
-  ##pm install $MODPATH/app/com.jcarletto.oslobridger.apk
+  ui_print "- Clearing OsloBridger cache"
+  pm clear com.jcarletto.oslobridger >&2
+  
+  else
+  ui_print "- This Module only works on Pixel 4 variants"
+  
+  fi
   
   
 }
